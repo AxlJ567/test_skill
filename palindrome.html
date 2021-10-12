@@ -1,0 +1,25 @@
+<html>
+<body>
+<form>
+	<p>
+		Input Teks: <input type="text" id="palin"> (Note: ketikkan kata)
+	</p>
+	<input type="button" value="Cek" onclick="checkPalindrom()"/>  
+</form>
+<p id="cek"></p>
+</body>
+<script>
+function checkPalindrom() {
+  var a = document.getElementById("palin").value; 
+  var split = a.split("");
+  var reverse = split.reverse();
+  var join = reverse.join("");
+  if(join == a){
+	document.getElementById("cek").innerHTML = "Ini Palindrome";
+  } else {
+	document.getElementById("cek").innerHTML = "Ini Bukan Palindrome";
+  }
+  
+}
+</script>
+</html>

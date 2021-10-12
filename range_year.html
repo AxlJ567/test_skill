@@ -1,0 +1,41 @@
+<html>
+<body>
+<form>
+	<p>
+		Input tahun 1: <input type="number" id="year1">
+	</p>
+	<p>
+		Input tahun 2: <input type="number" id="year2">
+	</p>
+	<input type="button" value="Cek" onclick="date()"/> 
+	
+	<p id="out"></p>
+</form>
+</body>
+<script>
+	function date(){
+	var a = document.getElementById("year1").value;
+	var b = document.getElementById("year2").value;
+	var year = [];
+		for (let i = a; i <= b; i++) {
+			year.push(i);
+		}
+	var new_year = [];
+	year.forEach(
+	function(tahun)
+    { 
+       if (LeapYear(tahun)) 
+       new_year.push(tahun);
+    });
+	document.getElementById("out").innerHTML = new_year;
+    }
+
+	function LeapYear(tahun) {
+	if ((tahun % 4 === 0 && tahun % 100 !== 0) || (tahun % 100 === 0 && tahun % 400 === 0)) {
+                return tahun;
+        } else {
+                return false;
+        }
+}
+</script>
+</html>
