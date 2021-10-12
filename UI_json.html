@@ -1,0 +1,106 @@
+<html>
+<body>
+
+<h2>Creating an Object from a JSON String</h2>
+<p><b>item di meeting rooms</b></p>
+<p id="demo"></p>
+<p><b>item device electronic</b></p>
+<p id="demo1"></p>
+<p><b>item furniture</b></p>
+<p id="demo2"></p>
+<p><b>item dibeli 16 januari 2020</b></p>
+<p id="demo3"></p>
+<p><b>item brown color</b></p>
+<p id="demo4"></p>
+<script>
+
+  var data = {
+    inventory_id: 9382,
+    name: "Brown Chair",
+    type: "furniture",
+    tags: [
+      "chair",
+      "furniture",
+      "brown"
+    ],
+    purchased_at: 1579190471,
+    placement: {
+      room_id: 3,
+      name: "Meeting Room"
+    }
+  };
+  var data1 = {
+    inventory_id: 9380,
+    name: "Big Desk",
+    type: "furniture",
+    tags: [
+      "desk",
+      "furniture",
+      "brown"
+    ],
+    purchased_at: 1579190642,
+    placement: {
+      room_id: 3,
+      name: "Meeting Room"
+    }
+  };
+  var data2 = {
+    inventory_id: 2932,
+    name: "LG Monitor 50 inch",
+    type: "electronic",
+    tags: [
+      "monitor"
+    ],
+    purchased_at: 1579017842,
+    placement: {
+      room_id: 3,
+      name: "Lavender"
+    }
+  };
+  var data3 = {
+    inventory_id: 232,
+    name: "Sharp Pendingin Ruangan 2PK",
+    type: "electronic",
+    tags: [
+      "ac"
+    ],
+    purchased_at: 1578931442,
+    placement: {
+      room_id: 5,
+      name: "Dhanapala"
+    }
+  };
+  var data4 = {
+    inventory_id: 9382,
+    name: "Alat Makan",
+    type: "tableware",
+    tags: [
+      "spoon",
+      "fork",
+      "tableware"
+    ],
+    purchased_at: 1578672242,
+    placement: {
+      room_id: 10,
+      name: "Rajawali"
+    }
+  };
+var me = data.tags[0]+", ";
+var ti = data1.tags[0];
+var mo = data2.name+", ";
+var te = data3.name;
+var mu = data.name+", ";
+var tu = data1.name;
+var ma = data4.name;
+var mi = data.name+", ";
+var to = data1.name;
+document.getElementById("demo").innerHTML = me.concat(ti);
+document.getElementById("demo1").innerHTML = mo.concat(te);
+document.getElementById("demo2").innerHTML = mu.concat(tu);
+document.getElementById("demo3").innerHTML = ma;
+document.getElementById("demo4").innerHTML = mi.concat(to);
+
+</script>
+
+</body>
+</html>
