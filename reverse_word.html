@@ -1,0 +1,24 @@
+<html>
+<body>
+<form>
+	<p>
+		Input Teks: <input type="text" id="str">
+	</p>
+	<input type="button" value="Cek" onclick="reversed()"/> 
+	<p id="get"></p>
+</form>
+</body>
+<script>
+	function reversed(){
+		var a = document.getElementById("str").value;
+		var b = a.split("").reverse().join("").split(" ").reverse(" ").join(" ");
+		var positions = [];
+		for(var i=0; i<a.length; i++){
+		if(a[i].match(/[A-Z]/) != null){
+        positions.push(i);
+			}
+		}
+		document.getElementById("get").innerHTML = b;
+	}
+</script>
+</html>

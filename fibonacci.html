@@ -1,0 +1,33 @@
+<html>
+<body>
+<form>
+	<p>
+		Input nomor 1: <input type="number" id="num1">
+	</p>
+	<p>
+		Input nomor 2: <input type="number" id="num2">
+	</p>
+	<p>
+		Input nomor 3: <input type="number" id="num3">
+	</p>
+	<input type="button" value="Cek" onclick="fibonacci()"/> 
+	<p id="gut"></p>
+	<p id="got"></p>
+</form>
+</body>
+<script>
+function fibonacci(){
+	var temp = 0;  
+    var i = 0;
+	var n1 = document.getElementById("num1").value;
+	var n2 = document.getElementById("num2").value;
+	var n3 = document.getElementById("num3").value;
+	 
+		temp = parseInt(n1) + parseInt(n2) + parseInt(n3); 
+		i = parseInt(temp) + 2; 
+	  
+		document.getElementById("gut").innerHTML = temp; 
+		document.getElementById("got").innerHTML = i; 
+}
+</script>
+</html>
